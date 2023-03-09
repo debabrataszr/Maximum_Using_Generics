@@ -8,7 +8,7 @@ public class MaximumValue {
         return maximumValue;
     }
     public static void main(String[] args){
-        MaximumValue maxValue=new MaximumValue();
-        System.out.println("Maximum Value of Integer : "+ maxValue.maximumInteger(20,10,25));
+        MaximumValue maximumValue=new MaximumValue();
+        System.out.println("Maximum Value of Integer : "+ maximumValue.maximumInteger(20,10,25));
     }
 }
