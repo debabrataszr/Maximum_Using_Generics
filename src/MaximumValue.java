@@ -1,14 +1,15 @@
 public class MaximumValue {
-    public Integer maximumInteger(Integer a, Integer b, Integer c) {
-        Integer maximumValue = a;
+    public Float maximumFloat(Float a, Float b, Float c) {
+        Float maximumValue = a;
         if (b.compareTo(maximumValue) > 0)
             maximumValue = b;
         if (c.compareTo(maximumValue) > 0)
             maximumValue = c;
         return maximumValue;
+
     }
     public static void main(String[] args){
-        MaximumValue maxValue=new MaximumValue();
-        System.out.println("Maximum Value of Integer : "+ maxValue.maximumInteger(20,10,25));
+        MaximumValue maximumValue=new MaximumValue();
+        System.out.println(maximumValue.maximumFloat(30.50F,15.05F,19.58F));
     }
 }
