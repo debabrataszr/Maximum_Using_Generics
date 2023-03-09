@@ -1,31 +1,28 @@
-import java.util.Arrays;
-
 public class MaximumValue<T extends Comparable<T>> {
-    T[] maximumValue;
-
-    public MaximumValue(T[] maximumValue) {
-        this.maximumValue = maximumValue;
-
-    }
-
-    public static <T extends Comparable<T>> T[] maximum(T... maximumValue) {
-        System.out.println("Given elements -> ");
-        for (T element : maximumValue) {
-            System.out.print(element + " ");
+    public static <T extends Comparable<T>> T maximum(T... number) {
+        T maximumValue = number[0];
+        for (int i = 1; i < number.length; i++) {
+            if (number[i].compareTo(maximumValue) > 0) {
+                maximumValue = number[i];
+            }
+        }
+        System.out.println("given values are : ");
+        for (int i = 0; i < number.length; i++) {
+            System.out.print(number[i] + " ");
         }
         System.out.println();
-        System.out.println("After Sorting -> ");
-        Arrays.sort(maximumValue);
-        for (T element : maximumValue) {
-            System.out.print(element + " ");
-        }
-        System.out.println();
+        printMax(maximumValue);
         return maximumValue;
     }
 
+    public static <T> void printMax(T max) {
+        System.out.println("Maximum Value is : " + max);
+    }
+
+    // main method
     public static void main(String[] args) {
-        maximum(10, 34, 85, 28, 45);
-        maximum("xyz", "dew", "jkl", "res", "abc");
-        maximum(25.8f, 40.9f, 57.2f, 12.3f, 5.4f);
+        maximum(23, 78, 36, 45, 23, 2, 5, 78);
+        maximum("xyz", "dij", "jsd", "drg", "wdd");
+        maximum(23f, 9f, 4.3f, 56.3f, 34.2f);
     }
 }
